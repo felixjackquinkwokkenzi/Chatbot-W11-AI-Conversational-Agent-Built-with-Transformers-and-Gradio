@@ -27,21 +27,6 @@ This notebook is ideal for demonstration, prototyping, and showcasing a chatbot 
 
 ---
 
-## Detected Libraries (from notebook)
-
-The notebook imports the following top-level libraries (detected heuristically):
-
-- `torch` (PyTorch): model inference backend
-- `transformers` (Hugging Face): model architectures & tokenizers
-- `gradio`: lightweight demo UI for interaction
-- `numpy`, `os`, `json`, `re`
-- `soundfile`: audio file handling
-- `getpass`: for secure input of credentials or secrets
-
-If you publish this notebook, include these in a `requirements.txt` for reproducibility.
-
----
-
 ## File / Cell Structure (summary)
 
 - **Total cells:** 6
@@ -52,29 +37,13 @@ The notebook is concise: most functionality is implemented with a few focused co
 
 ---
 
-## Main Functions (identified)
+## Main Functions
 
 - `detect_nlu_simple(text)` — A simple NLU classifier / intent extractor that maps user text to intents/entities.
 - `analyze_grammar_with_specialist(text)` — A grammar/semantic analysis helper (likely for polishing or validating generated responses).
 - `process_conversation(input_text, ...)` — Orchestrates the end-to-end flow: NLU → model inference → post-processing → response formatting.
 
 These functions are the backbone of the notebook's conversational flow; they can be adapted for more advanced models or extended with retrieval, memory, or multi-turn context management.
-
----
-
-## How to publish to GitHub (recommended structure)
-
-1. Create a new GitHub repository named something like:
-   `chatbot-w11-colab` or `conversational-agent-colab-demo`
-2. Add the following files to the repository root:
-   - `Chatbot_W11.ipynb` (the notebook)
-   - `README.md` (this file)
-   - `requirements.txt` (list of pip packages, e.g. `torch`, `transformers`, `gradio`, `soundfile`, etc.)
-   - Optionally: `assets/` (sample audio files), `models/` (small model artifacts or pointer scripts)
-3. Add a short repository description (GitHub repo description) like:
-   _"A Colab notebook demo of a Hugging Face Transformers-based conversational agent with a Gradio interface."_
-
-**Tip:** GitHub renders notebooks nicely, but large model files should not be committed directly — instead link to model hub URLs or provide instructions to download them in the notebook.
 
 ---
 
